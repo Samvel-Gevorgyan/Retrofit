@@ -7,6 +7,11 @@ android {
     namespace 'com.example.retrofit'
     compileSdk 32
 
+    buildFeatures {
+        viewBinding = true
+
+    }
+
     defaultConfig {
         applicationId "com.example.retrofit"
         minSdk 21
@@ -42,11 +47,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
-    implementation 'com.google.code.gson:gson:2.8.9'
+
+    //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-
-    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
+    //Client
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.9'
+    //Image loading
+    implementation 'io.coil-kt:coil:1.4.0'
 }
